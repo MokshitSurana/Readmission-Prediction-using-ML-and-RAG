@@ -394,7 +394,7 @@ const ReadmissionRiskPredictor: React.FC = () => {
         <div id="prediction-results" className="animate-in fade-in slide-in-from-bottom-8 duration-700">
           
           {/* MAIN RISK CARD */}
-          <div className={`p-10 rounded-2xl mb-8 text-center text-white shadow-xl ${prediction?.riskCategory === 'High' ? 'bg-gradient-to-br from-red-500 to-red-600' : prediction?.riskCategory === 'Moderate' ? 'bg-gradient-to-br from-orange-400 to-orange-500' : 'bg-gradient-to-br from-green-500 to-green-600'}`}>
+          <div className={`p-10 rounded-2xl mb-8 text-center text-white shadow-xl ${prediction?.riskCategory === 'High Risk' ? 'bg-gradient-to-br from-red-500 to-red-600' : prediction?.riskCategory === 'Moderate Risk' ? 'bg-gradient-to-br from-yellow-500 to-yellow-600' : 'bg-gradient-to-br from-green-500 to-green-600'}`}>
             <h3 className="text-sm font-bold opacity-80 uppercase tracking-widest mb-2">30-Day Readmission Risk</h3>
             <h2 className="text-6xl font-extrabold mb-3 tracking-tight">{prediction?.riskCategory}</h2>
             <p className="text-3xl font-medium opacity-95 mb-6">{(prediction?.probability! * 100).toFixed(1)}% Probability</p>
